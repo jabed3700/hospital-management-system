@@ -1,0 +1,30 @@
+delele = delete form tabel_name where condition;
+delete from student where id = 10;
+
+
+update = update table_name set update where condition
+update student set name="jabed",gpa=5 where id=10;
+
+
+create = create table table_name (column name and type)
+CREATE TABLE MyGuests (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(30) NOT NULL,
+lastname VARCHAR(30) NOT NULL,
+email VARCHAR(50),
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+
+
+
+
+
+
+
+
+SELECT s.Roll,s.Name,s.Gender,s.Age,e.GPA,e.Group,t.name
+FROM student_details as s 
+INNER JOIN exam_result as e
+on s.Roll = e.Roll
+INNER JOIN teacher as t
+ON e.Roll =t.Roll
